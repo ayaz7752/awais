@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Dark Social App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Login Screen -->
+<div id="login-screen" class="screen">
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Logo" class="logo">
+        <h2>Login</h2>
+        <input id="login-user" placeholder="Username">
+        <input id="login-pass" type="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p onclick="showSignup()" class="link">Create Account</p>
+    </div>
+</div>
+
+<!-- Signup Screen -->
+<div id="signup-screen" class="screen hidden">
+    <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="Logo" class="logo">
+        <h2>Signup</h2>
+        <input id="signup-user" placeholder="Username">
+        <input id="signup-pass" type="password" placeholder="Password">
+        <button onclick="signup()">Signup</button>
+        <p onclick="showLogin()" class="link">Back to Login</p>
+    </div>
+</div>
+
+<!-- Profile Screen -->
+<div id="profile-screen" class="screen hidden">
+    <div class="card">
+        <h2>Create / Edit Profile</h2>
+        <input id="profile-name" placeholder="Your Name">
+        <div class="avatar-selection" id="avatar-selection"></div>
+        <button onclick="saveProfile()">Save Profile</button>
+        <p onclick="closeProfile()" class="link">Back to Feed</p>
+    </div>
+</div>
+
+<!-- Main App Screen -->
+<div id="app-screen" class="hidden app">
+    <!-- Navbar -->
+    <div class="navbar">
+        <h1>Social Media App</h1>
+        <button onclick="openProfile()" class="profile-btn">Create Profile</button>
+    </div>
+
+    <div class="top-bar">
+        <input id="search" placeholder="Search...">
+        <select>
+            <option>Position 1</option>
+            <option>Position 2</option>
+        </select>
+    </div>
+
+    <h2>Random Posts</h2>
+    <div id="posts"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
